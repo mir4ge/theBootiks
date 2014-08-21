@@ -82,6 +82,7 @@ function twentyfourteen_setup() {
 	register_nav_menus( array(
 		'primary'   => __( 'Top primary menu', 'twentyfourteen' ),
 		'secondary' => __( 'Secondary menu in left sidebar', 'twentyfourteen' ),
+		'third' => __( 'Troisième menu en haut à gauche', 'twentyfourteen' ),
 	) );
 
 	/*

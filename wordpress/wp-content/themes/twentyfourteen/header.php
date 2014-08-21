@@ -54,12 +54,11 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav>
 			
-			<div class="menu-menu-top-left-container">
-				<ul id="menu-menu-top" class="nav-menu">
-					<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="http://localhost/theBootiks/wordpress/?page_id=21">Informations</a></li>
-					<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="http://localhost/theBootiks/wordpress/?page_id=19">Conseils et astuces</a></li>
-					<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="http://localhost/theBootiks/wordpress/?page_id=4">E-Boutique</a></li> </ul>
-			</div>
+			<nav id="third-navigation" class="site-navigation third-navigation" role="navigation">
+				<button class="menu-toggle"><?php _e( 'Third Menu', 'twentyfourteen' ); ?></button>
+				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
+				<?php wp_nav_menu( array( 'theme_location' => 'third', 'menu_class' => 'nav-menu' ) ); ?>
+			</nav>
 			
 		</div>
 
