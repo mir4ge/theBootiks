@@ -44,10 +44,7 @@ if (is_home()){
     <header class="header-section container">
       <div class="row">
 
-        <nav class="nav-collapse collapse">   
-          <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_class' => 'top-nav', 'container' => 'nav', 'menu_class' => '', 'fallback_cb'=>'colabs_nav_fallback') );?><!-- .topnav right -->
-
-          <div class="branding">
+          <div class="branding column col4">
             <h1 class="logo">
               <a href="<?php echo $site_url;?>">
                 <?php     
@@ -62,14 +59,17 @@ if (get_option('colabs_logotitle')=='logo'){
             <div class="site-description"><?php echo $site_description; ?></div>    
           </div><!-- .branding -->   
 
-<!--          <a class="btn-navbar collapsed">      
+        <a class="btn-navbar collapsed">      
             <span class="icon-bar"></span>      
             <span class="icon-bar"></span>      
             <span class="icon-bar"></span>    
-          </a>  -->  
-
-          <nav class="nav-collapse collapse column col4">   
-            <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container_class' => 'top-nav', 'container' => 'nav', 'menu_class' => '', 'fallback_cb'=>'colabs_nav_fallback') );?><!-- .topnav left -->    
+          </a> 
+        
+        <nav class="nav-collapse collapse column col4">   
+          <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_class' => 'top-nav', 'container' => 'nav', 'menu_class' => '', 'fallback_cb'=>'colabs_nav_fallback') );?><!-- .topnav left -->
+        
+          <nav class="nav-collapse collapse top-nav-right column col4">   
+            <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container_class' => 'top-nav', 'container' => 'nav', 'menu_class' => '', 'fallback_cb'=>'colabs_nav_fallback') );?><!-- .topnav right -->    
           </nav><!-- .nav-collapse -->
 
           </div>

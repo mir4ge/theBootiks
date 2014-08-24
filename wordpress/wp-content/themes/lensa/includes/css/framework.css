@@ -148,17 +148,17 @@ a:hover {
   width: 100%;
   min-width: 0;
   margin: 0 auto;
-  position: relative;
+  max-width: 1980px;
 }
 
 .column {
-  float: left;
-  margin-left: 3.09091%;
+  float: none;
+/*  margin-left: 3.09091%;*/
 }
 
-.column:first-child {
+/*.column:first-child {
   margin-left: 0;
-}
+}*/
 
 .col1 {
   width: 5.5%;
@@ -173,7 +173,8 @@ a:hover {
 }
 
 .col4 {
-  width: 31.27273%;
+  /*width: 31.27273%;*/
+  width: 33,33%;
 }
 
 .col5 {
