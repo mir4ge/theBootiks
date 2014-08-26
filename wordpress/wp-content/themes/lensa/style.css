@@ -121,7 +121,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
-  min-height: 62px;
+  min-height: 56px;
 }
 .header-section a {
   color: white;
@@ -134,7 +134,7 @@ body {
 ------------------------------------------------------------------- */
 .branding {
   width: 100%;
-  padding: 10px 0;
+  padding: 13px 0;
   margin: 0 auto;
   display: block;
   position: absolute;
@@ -152,50 +152,63 @@ body {
 }
 
 .site-description {
+  font-family: "Lato", sans-serif;
+  font-weight: lighter;
   font-size: 14px;
-  color: #909090;
+  color: #222;
   line-height: 1;
-  text-align: center;
+  height: 40px;
+  float: right;
+  padding-right: 50px;
 }
 
 /* ===================================================================
   #Top Navigation
 =================================================================== */
 /* left */
-.top-nav {
-  font-size: 16px;
+.top-nav, .top-nav ul, .top-nav li {
   float: left;
+}
+.top-nav-right, .top-nav-right ul, .top-nav-right li {
+  float: right;
+}
+.top-nav, .top-nav-right {
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
-.top-nav ul {
+
+.top-nav ul, .top-nav-right ul {
   margin: 0;
-  float: left;
   list-style: none;
 }
-.top-nav li {
-  float: left;
-}
-.top-nav a {
+
+.top-nav a, .top-nav-right a {
   color: #cccccc;
   display: block;
-  padding: 21px 11px;
+  padding: 18px 11px;
   position: relative;
 }
 .top-nav .sfHover > a,
 .top-nav a:hover,
 .top-nav .current-menu-item > a,
-.top-nav .current_page_item > a {
+.top-nav .current_page_item > a,
+.top-nav-right .sfHover > a,
+.top-nav-right a:hover,
+.top-nav-right .current-menu-item > a,
+.top-nav-right .current_page_item > a {
   color: #fff;
   background: #0a0a0a;
 }
-.top-nav i {
+.top-nav i, .top-nav-right i {
   font-size: 13px;
   line-height: 1;
   position: relative;
   top: -2px;
 }
 .top-nav .sf-with-ul:hover:before,
-.top-nav .sfHover > .sf-with-ul:before {
+.top-nav .sfHover > .sf-with-ul:before,
+.top-nav-right .sf-with-ul:hover:before,
+.top-nav-right .sfHover > .sf-with-ul:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -206,12 +219,6 @@ body {
   border-color: transparent transparent #333333 transparent;
 }
 
-/* right */
-.top-nav-right {
-  font-size: 18px;
-  float: right;
-  -webkit-font-smoothing: antialiased;
-}
 
 /* Superfish Essential Style
 ------------------------------------------------------------------- */
@@ -344,7 +351,47 @@ ul ul .sf-sub-indicator {
 .nav-collapse.collapse {
   height: auto;
   overflow: visible;
+  text-align: center;
 }
+
+/* ===================================================================
+  #Theme Navigation
+=================================================================== */
+.nav-theme li {
+  list-style: none;
+}
+
+.nav-theme a {
+  border: 3px solid #222;
+  padding: 20px 10px 8px 20px;
+}
+
+.nav-theme a p {
+  display: inline-block;
+  font-weight: bold;
+  color: #222;
+  font-size: 2em;
+  line-height: 2.5;
+}
+
+.nav-theme {
+  float: right;
+  margin-top: 20px;
+}
+
+.nav-theme a .triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 15px 15px;
+  border-color: transparent transparent #222222 transparent;
+  -webkit-border-color: transparent transparent #222222 transparent;
+  -webkit-transform:rotate(360deg);
+  margin: 0 0 -5px 20px;
+}
+
+
 
 
 /* ===================================================================
@@ -1760,7 +1807,7 @@ blockquote.right {
     margin-left: -20px;
     margin-right: -20px;
   }
-  .nav-collapse ul, .nav-collapse .top-nav, .nav-collapse li {
+  .nav-collapse ul, .nav-collapse .top-nav, .nav-collapse .top-nav-right, .nav-collapse li {
     float: none;
     display: block;
   }
@@ -1770,18 +1817,25 @@ blockquote.right {
   .nav-collapse a {
     padding: 5px 20px;
   }
-
-  .nav-collapse.collapse .top-nav {
-    margin-bottom: 20px;
-  }
-
-  .nav-collapse, .nav-collapse.collapse {
+  .nav-collapse.collapse {
     height: 0;
-    overflow: hidden;
+/*    overflow: hidden;*/
+  }
+  .nav-collapse.collapse .top-nav-right {
+    margin-bottom: 30px;
+  }
+  .nav-collapse.collapse .top-nav{
+    margin-top: 55px;
   }
 
   .btn-navbar {
     display: block;
+  }
+  .branding {
+    width: 88%;
+  }
+  .header-section {
+    overflow: hidden;
   }
 
   /* Sub Menu
@@ -1861,7 +1915,7 @@ blockquote.right {
     float:none;
   }
   .branding{
-    width:62%;
+    width:80%;
   }
   .footer-section, .progress-wrapper{
     position:static;
@@ -1921,7 +1975,9 @@ blockquote.right {
   .social_share{
     margin-bottom:20px;
   }
-  
+  .branding {
+    width: 70%;
+  }
   
 /* woo */
 
@@ -2108,6 +2164,14 @@ table.shop_table th{color:#888;font-size:12px;font-weight:700;line-height:18px;p
   img.attachment-shop_catalog.wp-post-image {
     height: 150px !important;
     width: 150px !important;
+  }
+  .logo {
+    font-size: 1.3em;
+    text-align: left;
+  }
+  .site-description{
+    font-size: 0.9em;
+    text-align: left;
   }
 
 }

@@ -108,6 +108,18 @@ $('.top-nav ul:first').addClass('sf-menu').superfish({
     $el.find('ul .sf-sub-indicator').html('<i class="icon-caret-right"></i>');
   }
 });
+$('.top-nav-right ul:first').addClass('sf-menu').superfish({
+  delay: 300,
+  animation: { opacity: 'show' },
+  speed: 'fast',
+  dropShadows: false,
+  onInit: function() {
+    var $el = $(this);
+    // Replace submenu indicator
+    $el.find('.sf-sub-indicator').html('<i class="icon-caret-down"></i>');
+    $el.find('ul .sf-sub-indicator').html('<i class="icon-caret-right"></i>');
+  }
+});
 
 /* Mobile nav collapse
 ------------------------------------------------------------------- */

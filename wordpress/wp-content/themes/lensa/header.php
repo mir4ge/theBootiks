@@ -56,7 +56,7 @@ if (get_option('colabs_logotitle')=='logo'){
                 ?>      
               </a>    
             </h1>      
-            <div class="site-description"><?php echo $site_description; ?></div>    
+            <!--<div class="site-description"><?php echo $site_description; ?></div> -->   
           </div><!-- .branding -->   
 
         <a class="btn-navbar collapsed">      
@@ -68,8 +68,8 @@ if (get_option('colabs_logotitle')=='logo'){
         <nav class="nav-collapse collapse column col4">   
           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_class' => 'top-nav', 'container' => 'nav', 'menu_class' => '', 'fallback_cb'=>'colabs_nav_fallback') );?><!-- .topnav left -->
         
-          <nav class="nav-collapse collapse top-nav-right column col4">   
-            <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container_class' => 'top-nav', 'container' => 'nav', 'menu_class' => '', 'fallback_cb'=>'colabs_nav_fallback') );?><!-- .topnav right -->    
+          <nav class="nav-collapse collapse column col4">
+            <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container_class' => 'top-nav-right', 'container' => 'nav', 'menu_class' => '', 'fallback_cb'=>'colabs_nav_fallback') );?><!-- .topnav right -->    
           </nav><!-- .nav-collapse -->
 
           </div>
